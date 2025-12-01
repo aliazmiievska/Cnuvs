@@ -1,29 +1,17 @@
 import { Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import About from './pages/About'
-import Favorites from './pages/Favorites'
-import NotFound from './pages/NotFound'
-import PetList from './components/PetList'
-import PetPage from './pages/PetPage'
-import AddAnimal from "./pages/AddAnimal"
+import Footer from './components/layouts/Footer'
+import AboutUs from './pages/AboutUs'
+import Login from './pages/Login'
 
 
 function App() {
   return (
 
     <div className='flex flex-col justify-between min-h-[100svh]'>
-      <Header />
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/favorites" element={<Favorites />} />
-        <Route path="*" element={<NotFound />} />
-        <Route path="/" element={<PetList />} />
-        <Route path="/animals/:id" element={<PetPage />} />
-        <Route path="/AddAnimal" element={<AddAnimal />} />
+        <Route path="/" element={<AboutUs />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
 
       <Footer />

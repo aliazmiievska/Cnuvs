@@ -1,17 +1,15 @@
 import React, { useEffect, useRef, useState } from "react"
 import { Link } from 'react-router-dom'
-import Logo from '../assets/logo.png'
-import Profile from '../assets/profile.png'
-import Favorite from '../assets/favorite.png'
+import Logo from '@/assets/logo.png'
 import { Menu, X } from "lucide-react"
-import AuthModal from './AuthModal'
+import AuthModal from '../modals/LoginAppModal'
 import { jwtDecode } from 'jwt-decode'
 import { useNavigate } from 'react-router-dom'
 
 
 interface DecodedToken {
     userId: string
-    email?: string 
+    email?: string
     exp: number
 }
 
@@ -55,23 +53,14 @@ const Header: React.FC = () => {
 
     const navigate = useNavigate()
 
-    const handleFavoriteClick = () => {
-        if (token) {
-            navigate('/favorites')
-        } else {
-            setAuthSource('favorite')
-            setShowAuth(true)
-        }
-    }
-
-    const handleProfileClick = () => {
-        if (token) {
-            setShowDropdown(prev => !prev)
-        } else {
-            setAuthSource('profile')
-            setShowAuth(true)
-        }
-    }
+    // const handleProfileClick = () => {
+    //     if (token) {
+    //         navigate('/login')
+    //     } else {
+    //         setAuthSource('profile')
+    //         setShowAuth(true)
+    //     }
+    // }
 
 
     return (
@@ -87,12 +76,28 @@ const Header: React.FC = () => {
                 <nav className={`flex gap-[3svw] fixed top-[4svh] ${isOpen ? 'left-[55svw]' : 'left-[83svw]'} z-50 landscape:static landscape:flex landscape:flex-row landscape:w-auto landscape:py-0 landscape:gap-[3svw]`}>
                     <div className={`${isOpen ? 'flex' : 'hidden landscape:flex'} relative`} ref={dropdownRef}>
 
-                        <button onClick={handleFavoriteClick}>
-                            <img src={Favorite} alt="Favorite" className="h-[12svw] landscape:h-[8svh] object-contain" />
+                        <button onClick={() => navigate('/')}>
+                            Про нас
                         </button>
 
-                        <button onClick={handleProfileClick}>
-                            <img src={Profile} alt="Profile" className="h-[12.75svw] landscape:h-[8.5svh] object-contain" />
+                        <button onClick={() => navigate('/')}>
+                            Новини
+                        </button>
+
+                        <button onClick={() => navigate('/')}>
+                            Методичні рекомендації
+                        </button>
+
+                        <button onClick={() => navigate('/')}>
+                            Освіта
+                        </button>
+
+                        <button onClick={() => navigate('/')}>
+                            Доступ до публічної інформації
+                        </button>
+
+                        <button onClick={() => navigate('/login')}>
+                            Увійти до кабінету
                         </button>
 
                         {showDropdown && token && (
@@ -108,6 +113,7 @@ const Header: React.FC = () => {
                     </button>
                 </nav>
             </header>
+            <hr />
 
             {showAuth && (
                 <AuthModal
