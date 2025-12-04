@@ -1,7 +1,7 @@
 import React from "react"
 import AntonCat from '../assets/Anton.png'
-import FooterTop from '../components/layouts/FooterTop'
-import Header from '../components/layouts/Header'
+import FooterTop from '../components/FooterTop'
+import Header from '../components/Header'
 
 const AboutUs: React.FC = () => {
   return (<div>
@@ -32,7 +32,7 @@ const AboutUs: React.FC = () => {
           </h1>
           <div className="bg-[#DEC1E9] rounded-full w-45 h-45 flex justify-center items-center">fffffff</div>
         </div>
-        
+
       </div>
 
     </section>

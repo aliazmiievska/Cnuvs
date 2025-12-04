@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import AntonCat from '../assets/Anton.png'
-import FooterTop from '../components/layouts/FooterTop'
-import AuthModal from '../components/modals/LoginAppModal'
+import FooterTop from '../components/FooterTop'
+import AuthModal from '../components/LoginAppModal'
 
 const Login: React.FC = () => {
 
@@ -45,16 +45,16 @@ const Login: React.FC = () => {
         </section>
         <FooterTop />
 
-    {showAuth && (
-                <AuthModal
-                    onClose={() => {
-                        setShowAuth(false)
-                    }}
-                    onSuccess={() => {
-                        setShowAuth(false)
-                    }}
-                />
-            )}
+        {showAuth && (
+            <AuthModal
+                onClose={() => {
+                    setShowAuth(false)
+                }}
+                onSuccess={() => {
+                    setShowAuth(false)
+                }}
+            />
+        )}
     </div>
     )
 }

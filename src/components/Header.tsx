@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { Link } from 'react-router-dom'
 import Logo from '@/assets/logo.png'
 import { Menu, X } from "lucide-react"
-import AuthModal from '../modals/LoginAppModal'
+import AuthModal from './LoginAppModal'
 import { jwtDecode } from 'jwt-decode'
 import { useNavigate } from 'react-router-dom'
 
