@@ -29,7 +29,7 @@ const AboutUs: React.FC = () => {
             <div className="relative z-10">
               <div className="flex gap-2 mb-6">
                 <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm">
-                  Мій студент - моя значимість
+                  Мій студент - моя зручність
                 </span>
                 <span className="bg-blue-400 text-white px-4 py-1 rounded-full text-sm">
                   Крок у цифрове майбутнє освіти

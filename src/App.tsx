@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
-import AboutUs from "./pages/AboutUs";
+import AboutUs from "./pages/Hero";
 import Login from "./pages/Login";
 
 function App() {
