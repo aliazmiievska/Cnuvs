@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="bg-white border-b border-gray-200">
+    <header className="bg-white border-b-2 border-gray-600">
       <div className="container mx-auto px-2 py-2 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Link to="/" className="flex gap-4">

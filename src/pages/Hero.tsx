@@ -8,22 +8,21 @@ const AboutUs: React.FC = () => {
     <>
       <Header />
       <section className="relative bg-gradient-to-br from-blue-100 via-blue-50 to-purple-100 overflow-hidden">
-        <div className="container mx-auto px-4 py-20 md:py-32">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-2 gap-5">
             <div className="relative">
-              <div className="relative z-10">
-                <img
-                  src={Student}
-                  alt="Anton"
-                  className="h-[39svh] landscape:h-[73svh] object-contain"
-                />
-              </div>
-
+              <img
+                src={Student}
+                alt="Anton"
+                className="h-100"
+              />
+              {/* тіпа кружечки блюрові
               <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
               <div
                 className="absolute bottom-0 left-0 w-64 h-64 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"
                 style={{ animationDelay: "1s" }}
-              ></div>
+              >
+              </div> */}
             </div>
 
             <div className="relative z-10">
@@ -36,25 +35,12 @@ const AboutUs: React.FC = () => {
                 </span>
               </div>
 
-              <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                У кожного покоління є свої інструменти змін. Для нас — це
-                технології.
-              </h1>
-
-              <p className="text-lg text-gray-700 leading-relaxed">
-                <span className="font-semibold">
-                  «Мій студент» — не просто програма.
-                </span>{" "}
-                Це{" "}
-                <span className="text-blue-600 font-medium">
-                  наша спроба зробити університет ближчим, чеснішим і справжнім.
-                </span>{" "}
-                Ми втомились від складності,{" "}
-                <span className="text-blue-600 font-medium">
-                  від паперів, від байдужості систем.
-                </span>{" "}
-                І тому ми створили щось своє — просте, живе, відкрите. Бо освіта
-                — це не про форму. Це про людину.
+              <p className="text-xl font-bold text-gray-900 leading-relaxed">
+                <div className="text-gray-900">
+                  У кожного покоління є свої інструменти змін. <br />
+                  Для нас — це технології.
+                </div>
+                «Мій студент» — не просто програма. Це наша спроба зробити університет ближчим, чеснішим і справжнім. Ми втомились від складності, від паперів, від байдужості систем. І тому ми створили щось своє — просте, живе, відкрите. Бо освіта — це не про форму. Це про людину.
               </p>
             </div>
           </div>
