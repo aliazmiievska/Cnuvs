@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import AntonCat from "../assets/Anton.png";
+import LogoBig from "../assets/LogoBig.png";
+import Books from "../assets/Books.png"
 import FooterTop from "../components/FooterTop";
 import AuthModal from "../components/LoginAppModal";
+import Card from "../assets/Card.png"
 
 const Login: React.FC = () => {
   const [showAuth, setShowAuth] = useState(false);
@@ -12,11 +14,11 @@ const Login: React.FC = () => {
         <div className="w-full max-w-6xl grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block">
-              <div className="bg-blue-400 rounded-lg p-4 transform -rotate-12 shadow-lg">
-                <div className="w-48 h-32 bg-blue-500 rounded-lg relative overflow-hidden">
-                  добрий день
-                </div>
-              </div>
+              <img
+                src={Card}
+                alt="Card"
+                className="absolute -top-20 -left-15 w-2xs"
+              />
             </div>
 
             <div>
@@ -59,13 +61,16 @@ const Login: React.FC = () => {
 
           <div className="relative">
             <div className="relative z-10 flex items-end justify-center">
-              <div className="relative inline-block">
-                <img
-                  src={AntonCat}
-                  alt="Anton"
-                  className="h-[39svh] landscape:h-[73svh] object-contain"
-                />
-              </div>
+              <img
+                src={LogoBig}
+                alt="Anton"
+                className="w-50 object-contain"
+              />
+              <img
+                src={Books}
+                alt="Anton"
+                className="absolute top-65 left-40 w-80 object-contain"
+              />
             </div>
 
             <div className="absolute top-1/4 left-0 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse"></div>

@@ -1,5 +1,5 @@
 import React from "react";
-import AntonCat from "../assets/Anton.png";
+import Student from "../assets/Student.png";
 import FooterTop from "../components/FooterTop";
 import Header from "../components/Header";
 
@@ -13,7 +13,7 @@ const AboutUs: React.FC = () => {
             <div className="relative">
               <div className="relative z-10">
                 <img
-                  src={AntonCat}
+                  src={Student}
                   alt="Anton"
                   className="h-[39svh] landscape:h-[73svh] object-contain"
                 />
