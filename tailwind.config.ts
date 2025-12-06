@@ -1,16 +1,16 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-    theme: {
-        extend: {},
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("portrait", "@media (orientation: portrait)");
+      addVariant("landscape", "@media (orientation: landscape)");
     },
-    plugins: [
-        function ({ addVariant }) {
-            addVariant("portrait", "@media (orientation: portrait)")
-            addVariant("landscape", "@media (orientation: landscape)")
-        },
-    ],
-}
+  ],
+};
 
-export default config
+export default config;
