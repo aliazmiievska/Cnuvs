@@ -14,17 +14,7 @@ const Login: React.FC = () => {
                     <div className="inline-block">
                         <div className="bg-blue-400 rounded-lg p-4 transform -rotate-12 shadow-lg">
                             <div className="w-48 h-32 bg-blue-500 rounded-lg relative overflow-hidden">
-                                <div className="absolute top-3 left-3 w-8 h-8 bg-white rounded-full"></div>
-                                <div className="absolute top-6 right-4 space-y-1">
-                                    {[...Array(6)].map((_, i) => (
-                                        <div key={i} className="h-1 bg-white rounded" style={{ width: `${60 - i * 8}px` }}></div>
-                                    ))}
-                                </div>
-                                <div className="absolute bottom-3 right-3 w-10 h-10 grid grid-cols-3 gap-0.5">
-                                    {[...Array(9)].map((_, i) => (
-                                        <div key={i} className="bg-white rounded-sm"></div>
-                                    ))}
-                                </div>
+                                добрий день
                             </div>
                         </div>
                     </div>
