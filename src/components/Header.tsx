@@ -1,138 +1,39 @@
-import React, { useEffect, useRef, useState } from "react"
-import { Link } from 'react-router-dom'
-import Logo from '@/assets/logo.png'
-import { Menu, X } from "lucide-react"
-import AuthModal from './LoginAppModal'
-import { jwtDecode } from 'jwt-decode'
+import React from "react"
 import { useNavigate } from 'react-router-dom'
 
 
-interface DecodedToken {
-    userId: string
-    email?: string
-    exp: number
-}
 
 const Header: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false)
-    const [showAuth, setShowAuth] = useState(false)
-    const [token, setToken] = useState<string | null>(localStorage.getItem('token'))
-    const [showDropdown, setShowDropdown] = useState(false)
-    const dropdownRef = useRef<HTMLDivElement>(null)
-    const [userEmail, setUserEmail] = useState<string | null>(null)
-    const [authSource, setAuthSource] = useState<'profile' | 'favorite' | null>(null)
-
-    useEffect(() => {
-        if (token) {
-            try {
-                const decoded: DecodedToken = jwtDecode(token)
-                setUserEmail(decoded.email || null)
-            } catch {
-                setUserEmail(null)
-            }
-        } else {
-            setUserEmail(null)
-        }
-    }, [token])
-
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-                setShowDropdown(false)
-            }
-        }
-        document.addEventListener("mousedown", handleClickOutside)
-        return () => document.removeEventListener("mousedown", handleClickOutside)
-    }, [])
-
-    const handleLogout = () => {
-        localStorage.removeItem('token')
-        setToken(null)
-        setShowDropdown(false)
-    }
-
-    const navigate = useNavigate()
-
-    // const handleProfileClick = () => {
-    //     if (token) {
-    //         navigate('/login')
-    //     } else {
-    //         setAuthSource('profile')
-    //         setShowAuth(true)
-    //     }
-    // }
-
+    const navigate = useNavigate();
 
     return (
-        <>
-            <header className="flex justify-between items-center h-[8svh] landscape:h-[15svh] px-[3svw] sm:px-[4svw] pt-[3svh]">
-                <div>
-                    <Link to="/" className="flex gap-4">
-                        <img src={Logo} alt="petFriend" className="h-[8svh] landscape:h-[14svh]" />
-                        <div className="pt-[5svh] text-[5svh] hidden landscape:block">PetFriend</div>
-                    </Link>
+        <header className="bg-white border-b border-gray-200">
+            <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div className="text-sm font-semibold text-gray-900">МІЙ СТУДЕНТ</div>
+                        <div className="text-xs text-gray-600">Карпатського національного університету</div>
+                    </div>
                 </div>
 
-                <nav className={`flex gap-[3svw] fixed top-[4svh] ${isOpen ? 'left-[55svw]' : 'left-[83svw]'} z-50 landscape:static landscape:flex landscape:flex-row landscape:w-auto landscape:py-0 landscape:gap-[3svw]`}>
-                    <div className={`${isOpen ? 'flex' : 'hidden landscape:flex'} relative`} ref={dropdownRef}>
-
-                        <button onClick={() => navigate('/')}>
-                            Про нас
-                        </button>
-
-                        <button onClick={() => navigate('/')}>
-                            Новини
-                        </button>
-
-                        <button onClick={() => navigate('/')}>
-                            Методичні рекомендації
-                        </button>
-
-                        <button onClick={() => navigate('/')}>
-                            Освіта
-                        </button>
-
-                        <button onClick={() => navigate('/')}>
-                            Доступ до публічної інформації
-                        </button>
-
-                        <button onClick={() => navigate('/login')}>
-                            Увійти до кабінету
-                        </button>
-
-                        {showDropdown && token && (
-                            <div className="absolute right-0 mt-2 bg-white border shadow-md rounded p-2 w-48 z-50">
-                                {userEmail && <p className="text-sm mb-2 truncate">{userEmail}</p>}
-                                <button onClick={handleLogout} className="text-red-500 text-sm">Log out</button>
-                            </div>
-                        )}
-                    </div>
-
-                    <button onClick={() => setIsOpen(!isOpen)} className="landscape:hidden">
-                        {isOpen ? <X className="w-[12svw] h-[12svw]" /> : <Menu className="w-[12svw] h-[12svw]" />}
-                    </button>
+                <nav className="hidden md:flex items-center gap-6">
+                    <a href="/login" className="text-sm text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Про нас</a>
+                    <a href="/login" className="text-sm text-gray-700 hover:text-blue-600 transition">Новини</a>
+                    <a href="/login" className="text-sm text-gray-700 hover:text-blue-600 transition">Методичні рекомендації</a>
+                    <a href="/login" className="text-sm text-gray-700 hover:text-blue-600 transition">Освіта</a>
+                    <a href="/login" className="text-sm text-gray-700 hover:text-blue-600 transition">Доступ до публічної інформації</a>
                 </nav>
-            </header>
-            <hr />
 
-            {showAuth && (
-                <AuthModal
-                    onClose={() => {
-                        setShowAuth(false)
-                        setAuthSource(null)
-                    }}
-                    onSuccess={(newToken) => {
-                        setToken(newToken)
-                        setShowAuth(false)
-
-                        if (authSource === 'favorite') {
-                            navigate('/favorites')
-                        }
-                        setAuthSource(null)
-                    }}
-                />
-            )}
-        </>
+                <button onClick={() => navigate('/login')} className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition hover:cursor-pointer">
+                    Увійти до кабінету
+                </button>
+            </div>
+        </header>
     )
 }
 
