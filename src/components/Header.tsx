@@ -1,5 +1,7 @@
 import React from "react"
 import { useNavigate } from 'react-router-dom'
+import Logo from '@/assets/logo.png'
+import { Link } from 'react-router-dom'
 
 
 
@@ -10,11 +12,9 @@ const Header: React.FC = () => {
         <header className="bg-white border-b border-gray-200">
             <div className="container mx-auto px-4 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                        <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
-                        </svg>
-                    </div>
+                    <Link to="/" className="flex gap-4">
+                        <img src={Logo} alt="petFriend" className="h-[8svh] landscape:h-[14svh]" />
+                    </Link>
                     <div>
                         <div className="text-sm font-semibold text-gray-900">МІЙ СТУДЕНТ</div>
                         <div className="text-xs text-gray-600">Карпатського національного університету</div>
