@@ -48,7 +48,7 @@ const Login: React.FC = () => {
                     <button className="w-full max-w-sm bg-white border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition flex items-center justify-center gap-2">
                         Увійти через ID.GOV.UA
                     </button>
-                    <button className="w-full max-w-sm bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition flex items-center justify-center gap-2">
+                    <button onClick={() => setShowAuth(true)} className="w-full max-w-sm bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition flex items-center justify-center gap-2">
                         Увійти через додаток
                     </button>
                 </div>
@@ -119,6 +119,17 @@ const Login: React.FC = () => {
                 <div className="absolute bottom-1/4 right-0 w-64 h-64 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse" style={{ animationDelay: '1s' }}></div>
             </div>
         </div>
+
+        {showAuth && (
+            <AuthModal
+                onClose={() => {
+                    setShowAuth(false)
+                }}
+                onSuccess={() => {
+                    setShowAuth(false)
+                }}
+            />
+        )}
     </div>
     )
 }
