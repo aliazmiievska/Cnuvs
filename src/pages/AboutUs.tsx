@@ -29,7 +29,7 @@ const AboutUs: React.FC = () => {
                   Мій студент - моя значимість
                 </span>
                 <span className="bg-blue-400 text-white px-4 py-1 rounded-full text-sm">
-                  АБВР у цифрове майбутнє освіти
+                  Крок у цифрове майбутнє освіти
                 </span>
               </div>
 
