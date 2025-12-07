@@ -7,14 +7,14 @@ const Header: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="border-b-2 border-gray-600">
+    <header className="">
       <div className="container mx-auto px-2 py-2 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Link to="/" className="flex gap-4">
             <img
               src={Logo}
               alt="petFriend"
-              className="h-[8svh] landscape:h-[14svh]"
+              className="w-15"
             />
           </Link>
           <div>
@@ -46,14 +46,13 @@ const Header: React.FC = () => {
           >
             Освіта
           </a>
+          <button
+            onClick={() => navigate("/login")}
+            className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg text-xs hover:bg-blue-50 transition hover:cursor-pointer"
+          >
+            Увійти до кабінету
+          </button>
         </nav>
-
-        <button
-          onClick={() => navigate("/login")}
-          className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg text-xs hover:bg-blue-50 transition hover:cursor-pointer"
-        >
-          Увійти до кабінету
-        </button>
       </div>
     </header>
   );
