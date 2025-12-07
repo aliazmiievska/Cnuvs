@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import LogoBig from "../assets/LogoBig.png";
-import Books from "../assets/Books.png"
+import LogoBig from "../assets/images/LogoBig.png";
+import Books from "../assets/images/Books.png"
 import FooterTop from "../components/FooterTop";
 import AuthModal from "../components/LoginAppModal";
-import Card from "../assets/Card.png"
+import Card from "../assets/images/Card.png"
 
 const Login: React.FC = () => {
   const [showAuth, setShowAuth] = useState(false);

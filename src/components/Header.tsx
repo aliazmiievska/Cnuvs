@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Logo from "@/assets/Logo.png";
+import Logo from "../assets/icons/Logo.png";
 import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="bg-white border-b-2 border-gray-600">
+    <header className="border-b-2 border-gray-600">
       <div className="container mx-auto px-2 py-2 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Link to="/" className="flex gap-4">

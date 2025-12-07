@@ -1,13 +1,13 @@
 import React from "react";
-import Student from "../assets/Student.png";
+import Student from "../assets/images/Student.png";
 import FooterTop from "../components/FooterTop";
 import Header from "../components/Header";
 
 const AboutUs: React.FC = () => {
   return (
     <>
-      <Header />
       <section className="relative bg-gradient-to-br from-blue-100 via-blue-50 to-purple-100 overflow-hidden">
+      <Header />
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-5">
             <div className="relative">
