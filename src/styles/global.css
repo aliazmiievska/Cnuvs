@@ -1,4 +1,5 @@
-@layer base {
+
+/* @layer base {
   body {
     @apply text-gray-800;
     @apply bg-gray-200;
@@ -63,4 +64,5 @@
       font-size: 0.875rem;
     }
   }
-}
+} */
+

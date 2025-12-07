@@ -6,7 +6,7 @@ const config: Config = {
     extend: {},
   },
   plugins: [
-    function ({ addVariant }) {
+    function ({ addVariant }: any) {
       addVariant("portrait", "@media (orientation: portrait)");
       addVariant("landscape", "@media (orientation: landscape)");
     },
