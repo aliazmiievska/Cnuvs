@@ -2,7 +2,7 @@ import React from "react";
 
 const FooterTop: React.FC = () => {
   return (
-    <div className="bg-blue-600 text-white text-xs py-1.5 overflow-hidden">
+    <div className="bg-gradient-to-r from-blue-600 from-40% to-blue-300 to-90% text-white text-xs py-1.5 overflow-hidden">
       <div className="flex animate-scroll whitespace-nowrap">
         <span className="mx-4">Разом сильніші. Разом за зміни.</span>
         <span className="mx-4">Думай глобально – дій локально.</span>
