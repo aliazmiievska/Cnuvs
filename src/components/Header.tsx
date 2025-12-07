@@ -27,15 +27,15 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        <nav className="hidden md:flex items-center gap-5">
+        <nav className="hidden md:flex items-center gap-6">
           <a
-            href="/login"
+            href="#"
             className="text-xs text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition"
           >
             Про нас
           </a>
           <a
-            href="/login"
+            href="#"
             className="text-xs hover:text-blue-600 transition"
           >
             Новини
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
           </a>
           <button
             onClick={() => navigate("/login")}
-            className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg text-xs hover:bg-blue-50 transition hover:cursor-pointer"
+            className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg text-xs hover:bg-blue-100 transition hover:cursor-pointer"
           >
             Увійти до кабінету
           </button>

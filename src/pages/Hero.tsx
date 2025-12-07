@@ -6,36 +6,29 @@ import Header from "../components/Header";
 const AboutUs: React.FC = () => {
   return (
     <>
-      <section className="relative bg-gradient-to-br from-blue-100 via-blue-50 to-purple-100 overflow-hidden">
+      <section className="relative flex flex-col justify-between bg-gradient-to-br from-blue-100 via-blue-50 to-purple-100 h-[100svh] overflow-hidden">
       <Header />
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-5">
-            <div className="relative">
+          <div className="flex justify-around gap-5">
+            <div className="relative flex items-end">
               <img
                 src={Student}
                 alt="Anton"
-                className="h-100"
+                className="w-[30svw]"
               />
-              {/* тіпа кружечки блюрові
-              <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-              <div
-                className="absolute bottom-0 left-0 w-64 h-64 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"
-                style={{ animationDelay: "1s" }}
-              >
-              </div> */}
             </div>
 
-            <div className="relative z-10">
-              <div className="flex gap-2 mb-6">
-                <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm">
+            <div className="w-[50svw] flex flex-col">
+              <div className="flex gap-2 my-4 text-white py-1 text-xs self-end">
+                <span className="bg-blue-500  px-4 py-1 rounded-full">
                   Мій студент - моя зручність
                 </span>
-                <span className="bg-blue-400 text-white px-4 py-1 rounded-full text-sm">
+                <span className="bg-blue-400  px-4 py-1 rounded-full">
                   Крок у цифрове майбутнє освіти
                 </span>
               </div>
 
-              <p className="text-xl font-bold text-gray-900 leading-relaxed">
+              <p className="text-sm font-medium text-gray-900 leading-relaxed">
                 <div className="text-gray-900">
                   У кожного покоління є свої інструменти змін. <br />
                   Для нас — це технології.

@@ -1,31 +1,31 @@
 @font-face {
   font-family: eUkraine;
-  src: url("./assets/fonts/e-UkraineHead-LOGO.otf") format("woff2");
-  font-weight: bold;
+  src: url("./assets/fonts/e-UkraineHead-LOGO.otf") format("opentype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: eUkraine;
-  src: url("./assets/fonts/e-Ukraine-Regular.otf") format("woff2");
-  font-weight: normal;
+  src: url("./assets/fonts/e-Ukraine-Regular.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: eUkraine;
-  src: url("./assets/fonts/e-Ukraine-Medium.otf") format("woff2");
-  font-weight: medium;
+  src: url("./assets/fonts/e-Ukraine-Medium.otf") format("opentype");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: eUkraine;
-  src: url("./assets/fonts/e-Ukraine-Light.otf") format("woff2");
-  font-weight: light;
+  src: url("./assets/fonts/e-Ukraine-Light.otf") format("opentype");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 } 
