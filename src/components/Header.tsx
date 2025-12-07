@@ -18,10 +18,10 @@ const Header: React.FC = () => {
             />
           </Link>
           <div>
-            <div className="text-sm font-semibold text-gray-900">
+            <div className="text-sm font-bold">
               МІЙ СТУДЕНТ
             </div>
-            <div className="text-xs text-gray-600">
+            <div className="text-xs font-bold">
               Карпатського національного університету
             </div>
           </div>
@@ -36,27 +36,15 @@ const Header: React.FC = () => {
           </a>
           <a
             href="/login"
-            className="text-xs text-gray-700 hover:text-blue-600 transition"
+            className="text-xs hover:text-blue-600 transition"
           >
             Новини
           </a>
           <a
             href="/login"
-            className="text-xs text-gray-700 hover:text-blue-600 transition"
-          >
-            Методичні рекомендації
-          </a>
-          <a
-            href="/login"
-            className="text-xs text-gray-700 hover:text-blue-600 transition"
+            className="text-xs hover:text-blue-600 transition"
           >
             Освіта
-          </a>
-          <a
-            href="/login"
-            className="text-xs text-gray-700 hover:text-blue-600 transition"
-          >
-            Доступ до публічної інформації
           </a>
         </nav>
 

@@ -34,5 +34,5 @@
 @import "tailwindcss";
 
 @theme {
-    --font-myfont: eUkraine;
+    --font-myfont: eUkraine, "sans-serif";
 }
