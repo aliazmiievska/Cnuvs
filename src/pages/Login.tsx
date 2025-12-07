@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import LogoBig from "../assets/images/LogoBig.png";
 import Books from "../assets/images/Books.png"
 import FooterTop from "../components/FooterTop";
@@ -7,55 +8,52 @@ import Card from "../assets/images/Card.png"
 
 const Login: React.FC = () => {
   const [showAuth, setShowAuth] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 flex items-center justify-center p-4">
+      <div className="h-screen bg-gradient-to-br from-blue-50 via-white to-blue-200 flex items-center justify-center p-4">
         <div className="w-full max-w-6xl grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="inline-block">
-              <img
-                src={Card}
-                alt="Card"
-                className="absolute -top-20 -left-15 w-2xs"
-              />
-            </div>
+          <div className="ml-25">
+            <img
+              src={Card}
+              alt="Card"
+              className="absolute -top-30 -left-15 w-2xs"
+            />
 
             <div>
-              <h1 className="text-5xl font-bold text-gray-900 mb-2">
-                Вхід до веб<span className="text-blue-600">порталу</span>
+              <h1 className="text-3xl font-medium text-black mt-20 mb-2">
+                Вхід до вебпорталу
               </h1>
-              <h2 className="text-5xl font-bold text-gray-900 mb-4">
-                Мій <span className="text-blue-600">Студент</span>
+              <h2 className="text-3xl font-medium text-black mb-2">
+                Мій Студент
               </h2>
-              <p className="text-lg text-gray-700 flex items-center gap-2">
+              <p className="text-md text-black flex items-center gap-2">
                 Оберіть спосіб для входу
                 <span className="text-2xl">🔑</span>
               </p>
-              <p className="text-sm text-gray-600 mt-1">
+              <p className="text-[2svh] font-light text-black mt-1 mb-6">
                 **Єдина централізована система входу до сервісів університету
               </p>
             </div>
 
-            <div className="space-y-3">
-              <button className="w-full max-w-sm bg-white border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition flex items-center justify-center gap-2">
-                Увійти через ID.GOV.UA
-              </button>
-              <button
-                onClick={() => setShowAuth(true)}
-                className="w-full max-w-sm bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition flex items-center justify-center gap-2"
-              >
-                Увійти через додаток
-              </button>
-            </div>
+            <button className="w-45 h-8 bg-white border-2 border-blue-600 text-xs text-blue-600 rounded-xl hover:bg-blue-50 mb-2 transition flex items-center justify-center hover:cursor-pointer">
+              Увійти через ID.GOV.UA
+            </button>
+            <button
+              onClick={() => setShowAuth(true)}
+              className="bg-blue-600 w-45 h-8 text-xs text-white rounded-xl hover:bg-blue-700 mb-7 transition  flex items-center justify-center hover:cursor-pointer"
+            >
+              Увійти через додаток
+            </button>
 
-            <div className="pt-4 border-t border-gray-300 max-w-sm">
-              <p className="text-center text-gray-600 text-sm mb-2">
+            <div className="pt-4 max-w-sm border-t">
+              <p className="text-center text-gray-500 font-light text-xs mb-2">
                 Ще не студент КНУВС?
               </p>
-              <button className="text-blue-600 hover:text-blue-700 font-medium text-sm underline">
+              <div onClick={() => navigate('#')} className="text-center text-gray-500 hover:text-gray-700 font-light text-xs underline hover:cursor-pointer">
                 Створити кабінет абітурієнта
-              </button>
+              </div>
             </div>
           </div>
 
@@ -72,12 +70,6 @@ const Login: React.FC = () => {
                 className="absolute top-65 left-40 w-80 object-contain"
               />
             </div>
-
-            <div className="absolute top-1/4 left-0 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse"></div>
-            <div
-              className="absolute bottom-1/4 right-0 w-64 h-64 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse"
-              style={{ animationDelay: "1s" }}
-            ></div>
           </div>
         </div>
 
