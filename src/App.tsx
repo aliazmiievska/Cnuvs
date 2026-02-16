@@ -5,7 +5,7 @@ import Login from "./pages/Login";
 
 function App() {
   return (
-    <div className="flex flex-col justify-between font-myfont min-h-[100svh]">
+    <div className="flex flex-col justify-between font-myfont min-h-[100svh] bg-gradient-to-br from-purple-50 via-blue-50 to-purple-100">
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/login" element={<Login />} />

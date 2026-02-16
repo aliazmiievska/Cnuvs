@@ -12,7 +12,7 @@ const Login: React.FC = () => {
 
   return (
     <>
-      <div className="h-screen bg-gradient-to-br from-blue-50 via-white to-blue-200 flex items-center justify-center p-4">
+      <div className="h-screen flex items-center justify-center p-4">
         <div className="w-full max-w-6xl grid md:grid-cols-2 gap-12 items-center">
           <div className="ml-25">
             <img
@@ -22,12 +22,10 @@ const Login: React.FC = () => {
             />
 
             <div>
-              <h1 className="text-3xl font-medium text-black mt-20 mb-2">
-                Вхід до вебпорталу
-              </h1>
-              <h2 className="text-3xl font-medium text-black mb-2">
+              <h1 className="text-3xl font-medium mt-20 mb-2 bg-gradient-to-br from-black from-20% to-blue-500 to-60% bg-clip-text text-transparent">
+                Вхід до вебпорталу <br />
                 Мій Студент
-              </h2>
+              </h1>
               <p className="text-md text-black flex items-center gap-2">
                 Оберіть спосіб для входу
                 <span className="text-2xl">🔑</span>
@@ -37,12 +35,12 @@ const Login: React.FC = () => {
               </p>
             </div>
 
-            <button className="w-45 h-8 bg-white border-2 border-blue-600 text-xs text-blue-600 rounded-xl hover:bg-blue-50 mb-2 transition flex items-center justify-center hover:cursor-pointer">
-              Увійти через ID.GOV.UA
+            <button className="w-49 h-8 bg-white border-2 border-blue-600 text-xs text-blue-600 rounded-xl hover:bg-blue-50 mb-2 transition flex items-center justify-center hover:cursor-pointer">
+              Увійти через CNU.EDU.UA
             </button>
             <button
               onClick={() => setShowAuth(true)}
-              className="bg-blue-600 w-45 h-8 text-xs text-white rounded-xl hover:bg-blue-700 mb-7 transition  flex items-center justify-center hover:cursor-pointer"
+              className="bg-blue-600 w-49 h-8 text-xs text-white rounded-xl hover:bg-blue-700 mb-7 transition  flex items-center justify-center hover:cursor-pointer"
             >
               Увійти через додаток
             </button>
